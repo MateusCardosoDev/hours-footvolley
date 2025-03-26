@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect } from "react";
 
 const getNextClassDate = () => {
@@ -5,7 +6,7 @@ const getNextClassDate = () => {
   const classDays = [1, 3, 5]; // Seg (1), Qua (3), Sex (5)
   const classHour = 20; // 20h
 
-  let nextClass = new Date(now);
+  const nextClass = new Date(now);
   nextClass.setHours(classHour, 0, 0, 0); // Ajusta para 20:00:00
 
   // Se hoje já passou do horário, procurar o próximo dia
